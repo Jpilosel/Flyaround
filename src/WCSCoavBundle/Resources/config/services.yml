@@ -1,0 +1,49 @@
+services:
+#    wcs_coav.example:
+#        class: WCSCoavBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+services:
+    app.admin.terrain:
+        class: WCSCoavBundle\Admin\TerrainAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Airfrance", label: "Terrain" }
+        arguments:
+            - ~
+            - WCSCoavBundle\Entity\Terrain
+            - ~
+
+    app.admin.flight:
+            class: WCSCoavBundle\Admin\FlightAdmin
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: "Airfrance", label: "Flight" }
+            arguments:
+                - ~
+                - WCSCoavBundle\Entity\Flight
+                - ~
+
+    app.admin.reservation:
+            class: WCSCoavBundle\Admin\ReservationAdmin
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: "Airfrance", label: "Reservation" }
+            arguments:
+                - ~
+                - WCSCoavBundle\Entity\Reservation
+                - ~
+
+    app.admin.User:
+            class: WCSCoavBundle\Admin\UserAdmin
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: "Airfrance", label: "Utilisateurs" }
+            arguments:
+                - ~
+                - WCSCoavBundle\Entity\User
+                - ~
+
+    app.admin.PlaneModel:
+            class: WCSCoavBundle\Admin\PlaneModelAdmin
+            tags:
+                - { name: sonata.admin, manager_type: orm, group: "Airfrance", label: "PlaneModel" }
+            arguments:
+                - ~
+                - WCSCoavBundle\Entity\PlaneModel
+                - ~

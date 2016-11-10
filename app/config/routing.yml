@@ -1,0 +1,28 @@
+wcs_coav:
+    resource: "@WCSCoavBundle/Resources/config/routing.yml"
+    prefix:   /
+
+wcs_coav_flight:
+        resource: "@WCSCoavBundle/Resources/config/routing/flight.yml"
+        prefix:   /flight
+
+wcs_coav_reservation:
+        resource: "@WCSCoavBundle/Resources/config/routing/reservation.yml"
+        prefix:   /reservation
+
+wcs_coav_terrain:
+    resource: "@WCSCoavBundle/Resources/config/routing/terrain.yml"
+    prefix:   /terrain
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin

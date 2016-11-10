@@ -1,0 +1,29 @@
+WCSCoavBundle\Entity\PlaneModel:
+    type: entity
+    table: null
+    repositoryClass: WCSCoavBundle\Repository\PlaneModelRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        model:
+            type: string
+            length: 255
+        manufacturer:
+            type: string
+            length: 255
+            nullable: true
+            column: Manufacturer
+        cruiseSpeed:
+            type: integer
+            nullable: true
+        nbSeats:
+            type: integer
+            nullable: true
+        status:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
